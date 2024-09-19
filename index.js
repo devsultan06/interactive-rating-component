@@ -30,10 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Show the thank you container
       thankYouContainer.classList.add("visible");
 
-      // Optionally: Use setTimeout to remove the display property after the animation ends
       setTimeout(() => {
         thankYouContainer.style.display = "block"; // Ensure it's block for animation
-      }, 10); // Short timeout to trigger the CSS transition
+      }, 10);
     } else {
       // Show error message
       errorMessage.textContent = "Please select a number";
