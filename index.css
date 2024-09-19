@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+}
+
+div.container {
+  background: linear-gradient(
+    to bottom,
+    hsla(217, 12%, 63%, 0.1) 1%,
+    /* 50% opacity */ hsla(213, 19%, 18%, 0.5) 90% /* 50% opacity */
+  );
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+}
+
+div.star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: hsl(213, 19%, 18%);
+}
+
+div.numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+div.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #272e38;
+  height: 50px;
+  width: 50px;
+  color: hsl(217, 12%, 63%);
+  cursor: url(./images/cursor2.png), pointer;
+}
+
+.number.active {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(213, 19%, 18%);
+}
+
+div.container h2 {
+  margin-bottom: 10px;
+}
+div.container p {
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+}
+
+button {
+  background-color: hsl(25, 97%, 53%);
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+
+.thanks {
+  text-align: center;
+  display: none; /* Initially hidden */
+  opacity: 0; /* Start with opacity 0 for fade effect */
+  transition: opacity 0.5s ease; /* Transition for opacity */
+}
+
+.thanks.visible {
+  display: block; /* Make it block when visible */
+  opacity: 1; /* Fade in effect */
+}
+
+.thanks-img {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+div.selected {
+  background-color: #272e38;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.error-message {
+  position: absolute; /* Position it absolutely */
+  top: 100px; /* Adjust top position */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, 0); /* Shift left by half its width */
+  margin-bottom: 20px;
+  color: hsl(0, 100%, 100%); /* Text color */
+  background-color: hsl(25, 97%, 53%); /* Background color */
+  padding: 10px; /* Padding for the box */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text */
+}
